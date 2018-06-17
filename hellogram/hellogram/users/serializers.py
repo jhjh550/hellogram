@@ -19,7 +19,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
             'images'
         )
 
-class ExplorerUserSerializer(serializers.ModelSerializer):
+class ListUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.User
