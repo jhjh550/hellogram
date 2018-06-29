@@ -23,6 +23,7 @@ urlpatterns = [
     ),
 
     url(r'^images/', include('hellogram.images.urls', namespace='images')),
+    url(r'^notifications/', include('hellogram.notifications.urls', namespace='notifications')),
 
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
