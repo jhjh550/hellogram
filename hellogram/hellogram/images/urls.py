@@ -4,6 +4,11 @@ from . import views
 app_name = "images" 
 urlpatterns = [
     url(
+        regex=r'^search/$',
+        view=views.Search.as_view(),
+        name='search'
+    ),
+    url(
         regex=r'^$',
         view=views.Feed.as_view(),
         name='feed'
@@ -33,10 +38,10 @@ urlpatterns = [
         view=views.ModerateComments.as_view(),
         name='comment_image'
     ),
-    
     url(
-        regex=r'comments/(?P<comment_id>[0-9]+)/$',
+        regex=r'^comments/(?P<comment_id>[0-9]+)/$',
         view=views.Comment.as_view(),
         name='comment'
-    )
+    ),
+    
 ]
